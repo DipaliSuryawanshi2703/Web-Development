@@ -1,0 +1,18 @@
+nav{
+    text-align: right;
+    background-color: aqua;
+}
+form{
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px 300px 10px 300px;
+    background-color: rgb(235, 239, 241);
+    height: 300px;
+    padding-top: 20px;
+}
+body{
+    background-color:rgb(202, 224, 235);
+}
+.About{
+    background-color: antiquewhite;
+}
