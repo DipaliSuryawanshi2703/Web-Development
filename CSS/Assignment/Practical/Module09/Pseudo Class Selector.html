@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Pseudo class Selector</title>
+    <style>
+        .form{
+            
+            display:flex;
+            justify-content:center;
+            text-align: center;
+            border: 2px;
+           
+            
+                     
+        }
+        form{
+            width: 300px;
+            padding: 20px;
+            border: 1px solid red;
+             background-color: rgb(162, 216, 241);
+        }
+       button:hover{
+        background-color: aquamarine;
+        color: blue;
+       }
+       input:focus{
+        border:1px solid red;
+        background-color: rgb(223, 98, 160);
+       }
+    </style>
+</head>
+<body>
+    
+       <div class="form">
+        <form>
+        <label for="Uname">Username</label>
+         <input type="Text" name="Username"><br><br>
+        <label for="Pass">Password</label>
+        <input type="Password" name="Password"><br><br>
+       <button>Login </button>
+       </form>
+       </div>
+    
+
+    </form>
+</body>
+</html>

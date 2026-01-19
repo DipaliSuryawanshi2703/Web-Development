@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector </title>
+    <style>
+        input[type="text"] {
+            border-color: rgb(192, 60, 27);
+            background-color: aqua;
+        }
+
+        input[type="Password"] {
+            background-color: aquamarine;
+            border-color: brown;
+        }
+
+        a[href^="/Attribute Selector .html"] {
+            color: blueviolet;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration-line: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="Uname">Username</label>
+        <input type="text" name="Username"><br><br>
+        <label for="Mname">Middlename</label>
+        <input type="text" name="Middle"><br><br>
+        <label for="Sname">Surname</label>
+        <input type="text" name="Surname"><br><br>
+        <label for="Pass">Password</label>
+        <input type="Password" name="Password"><br>
+        <a href="/Attribute Selector .html">Attribute</a>
+
+    </form>
+
+</body>
+
+</html>
