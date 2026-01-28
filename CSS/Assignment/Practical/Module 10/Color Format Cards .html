@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Format Cards </title>
+    <style>
+        .container {
+            display: flex;
+            /* justify-content: space-around; */
+            gap: 20px
+        }
+
+        .box1 {
+
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+        }
+
+        .box2 {
+
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .box3 {
+
+            background-color: rgba(238, 26, 26);
+            height: 200px;
+            width: 200px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">Card 1</div>
+        <div class="box2">Card 2</div>
+        <div class="box3">Card 3</div>
+    </div>
+</body>
+
+</html>
