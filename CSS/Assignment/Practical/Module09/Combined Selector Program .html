@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Selector Program </title>
+    <style>
+    .info
+        {
+            font-style: italic;
+            color: yellowgreen;
+        }
+    
+     #name
+     {
+        background-color: rgb(243, 150, 28);
+        font-weight:bold;
+     }
+     button:hover{background-color: red;color: beige;}   
+     h1::after{content:"(.Net)";color: blue;}
+    </style>
+</head>
+
+<body>
+    <h1>C Sharp</h1>
+    <h3 id="name">Information</h3>
+    <p class="info">C# (pronounced "C-Sharp") is a modern, object-oriented programming language developed by Microsoft, used for
+        building a vast range of applications like web, mobile, desktop, and games (especially with Unity), running on
+        the versatile .NET platform across Windows, macOS, and Linux. It's known for its versatility, object-oriented
+        features, and ease of use for developers, integrating features from C++ and Java for creating everything from
+        complex enterprise software to simple scripts</p>
+    <h3> Common Uses</h3>
+    <ol>
+        <li>Game Development: With the Unity engine.</li>
+        <li>Enterprise Software: Building large business applications</li>
+        <li>Web Applications: Using ASP.NET.</li>
+        <li>Desktop & Mobile Apps: For Windows, Android, and iOS.</li>
+    </ol>
+    <label id="submit">Submit : </label>
+    <button>Submit</button>
+</body>
+
+</html>
