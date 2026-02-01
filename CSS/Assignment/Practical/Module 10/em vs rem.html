@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em vs rem Typography Demo </title>
+    <style>
+        .parent
+        {
+            font-size: 16px;
+            background-color: pink;
+            display: grid;
+            justify-content: center;
+            height: 600px;
+           margin: 300px;
+           padding: 100px;
+         }
+         .child
+         {
+            font-size: 2em;
+         }
+         .child2
+         {
+            font-size:2rem
+         }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <p>Fork Infosystem -16px</p>
+        <p class="child">
+          welcome -2em
+        </p>
+         <p class="child2">
+          Web Development-2rem
+        </p>
+    </div>
+    
+</body>
+</html>
