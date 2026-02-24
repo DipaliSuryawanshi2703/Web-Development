@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="btn">Save</button>
+    <pre id="output"></pre>
+    <script>
+        const btn = document.querySelector("#btn");
+        const out = document.querySelector("#output");
+        btn.addEventListener("click",function(){
+           out.textContent="Hello";
+           btn.style.background ="red";
+        })
+
+    </script> 
+</body>
+</html>

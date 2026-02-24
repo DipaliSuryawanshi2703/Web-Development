@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="frm">
+    <label>Username</label>
+    <input type = "text"id ="UName" placeholder="Enetr Username">
+    <button>Submit</button>
+    <p id="out"></p>
+    </form>
+    <script>
+        const Forms = document.querySelector("#frm");
+        const Out = document.getElementById("out");
+        Forms.addEventListener("submit",(refresh)=>{
+        const Name = document.querySelector("#UName").value.trim();
+        Out.textContent = "Submitted  :  "+ Name;  
+        refresh.preventDefault ();
+        });
+        
+
+    </script>
+</body>
+</html>

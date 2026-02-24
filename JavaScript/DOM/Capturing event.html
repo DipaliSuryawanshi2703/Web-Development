@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer" style = "padding:10px; border: 2px solid rgb(223, 25, 157);">
+    <div id="inner" style = "padding:10px; border: 2px solid blue;">
+        <button id="btn">Click</button>
+    </div> 
+    </div>
+    <pre id="log"></pre>
+    <script>
+        const Log = (msg)=>{
+            document.getElementById("log").textContent += msg +"\n";
+        }
+        document.querySelector("#outer").addEventListener("click",(para)=>{
+            Log("outer capture")},{capture:true}
+        );
+        document.querySelector("#inner").addEventListener("click",(param)=>{Log("inner Capture")});
+         document.querySelector("#btn").addEventListener("click",(params)=>{Log("button Capture")});
+    </script>
+</body>
+</html>
