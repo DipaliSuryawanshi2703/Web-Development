@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"style="padding:20px;border:2px solid blue ">
+        <span id="inner">Click inner text</span>
+    </button>
+    <pre id="log"></pre>
+    <script>
+        const Log = (msg)=>{document.getElementById("log").textContent +=msg+"\n";}
+        document.querySelector("#btn").addEventListener("click",(e)=>{
+            Log("target =  " + e.target.tagName +" current target =  "+ e.currentTarget.tagName);
+        });
+    </script>
+</body>
+</html>

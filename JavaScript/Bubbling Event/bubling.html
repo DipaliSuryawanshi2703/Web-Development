@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="superparent" style="padding:20px; border:2px solid rgb(38, 0, 255)">
+    <div id="parent"style="padding:20px; border:2px dotted red">
+        <button id="child">Child button</button>
+    </div>
+    </div>
+    <pre id="out"></pre>
+    <script>
+        const log = (msg)=>{
+            document.querySelector("#out").textContent +=msg + "\n";
+        }
+        document.querySelector("#parent").addEventListener("click",(e)=>{
+            log("parent listner fired");
+             e.stopPropagation(); ///when we want stop bubbling
+        });
+        document.querySelector("#child").addEventListener("click",(para)=>{log("child listner fired")});
+      
+       
+         document.querySelector("#superparent").addEventListener("click",(e)=>{log("superparent listner fired")});
+       
+    </script>
+</body>
+</html>
