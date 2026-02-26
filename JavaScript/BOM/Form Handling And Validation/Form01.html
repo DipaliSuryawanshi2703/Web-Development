@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #dialog {
+            display: none;
+            position: fixed;
+            width: 400px;
+            height: 250px;
+            left: 50%;
+            right: 40%;
+            top: 30%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px solid rgb(151, 146, 146);
+            box-shadow: 0 0 15px rgb(206, 154, 154);
+        }
+
+        button:hover {
+            background-color: pink;
+        }
+
+        .container {
+            width: 400px;
+            height: 400px;
+            padding: 20px;
+            border-color: gray;
+            background-color: azure;
+            align-items: center;
+            margin-left: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+        }
+
+        input,
+        select {
+            margin-top: 5px;
+            margin-bottom: 8px;
+            padding: 10px;
+            width: 400px;
+
+        }
+
+        button {
+            width: 100px;
+            padding: 10px;
+            background-color: darkmagenta;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>User Login</h2>
+        <form id="loginform">
+            <label>Full Name</label>
+            <input type="text" id="FName">
+            <span id="NameError"></span>
+
+            <label>Email</label>
+            <input type="email" id="Email">
+            <span id="EmailError"></span>
+
+            <label>Age</label>
+            <input type="text" id="age">
+            <span id="AgeError"></span>
+
+            <select id="city">
+                <option value="">Select City</option>
+                <option value="pune">Pune</option>
+                <option value="karad">Karad</option>
+                <option value="satara">Satara</option>
+            </select>
+            <span id="CityError"></span>
+            <br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="dialog">
+        <h3>User Details</h3>
+        <p id="output"></p>
+        <button onclick="closeDialog()">Close</button>
+    </div>
+    <script>
+        document.getElementById("loginform").addEventListener("submit", function (e) {
+            e.preventDefault();
+            let Name = document.getElementById("FName").value;
+            let SEmail = document.getElementById("Email").value;
+            let Age = document.getElementById("age").value;
+            let City = document.getElementById("city").value;
+
+            document.getElementById("NameError").innerText = "";
+            document.getElementById("EmailError").innerText = "";
+            document.getElementById("AgeError").innerText = "";
+            document.getElementById("CityError").innerText = "";
+
+            let Valid = true;
+
+            if (Name === "") {
+                document.getElementById("NameError").innerText = "Name Is Required";
+                Valid = false;
+            }
+            if (SEmail === "") {
+                document.getElementById("EmailError").innerText = "Email Is Required";
+                Valid = false;
+            }
+            if (Age === "") {
+                document.getElementById("AgeError").innerText = "Age Is Required";
+                Valid = false;
+            }
+            else if (isNaN(Age)) {
+                document.getElementById("AgeError").innerText = "Age Is Required";
+                Valid = false;
+            }
+            if (City === "") {
+                document.getElementById("CityError").innerText = "City Is Required";
+                Valid = false;
+            }
+            if (Valid) {
+
+                document.getElementById("output").innerHTML =
+                    "Name :  " + Name + "<br>" +
+                    "Email :   " + SEmail + "<br>" +
+                    "Age :  " + Age + "<br>" +
+                    "City  :  " + City;
+                document.getElementById("dialog").style.display = "block";
+            }
+
+
+        });
+        function closeDialog() {
+            document.getElementById("dialog").style.display = "none";
+            ClearForm();
+        }
+        function ClearForm() {
+            document.getElementById("loginform").reset();
+            //// kiva he pn Vapru shkto
+            //// document.getElementById("FName").value="";
+            //  document.getElementById("Email").value="";
+            // document.getElementById("age").value="";
+            //document.getElementById("city").value="";
+
+            //document.getElementById("NameError").innerText="";
+            //document. getElementById("EmailError").innerText="";
+            //document. getElementById("AgeError").innerText="";
+            // document. getElementById("CityError").innerText="";
+        }
+
+    </script>
+</body>
+
+</html>
