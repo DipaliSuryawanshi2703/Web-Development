@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Timer</title>
+    <style>
+        body{
+            text-align: center;
+            margin: 100px;
+        }
+        #timer{
+            margin: 20px;
+            font-size: 50px;
+        }
+        button{
+            font-size: 30px;
+            padding: 10px;
+            color: white;
+            background-color: darkgreen;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div id="timer"> 00 : 00 : 00</div>
+   <button onclick=" StartTimer()">Start</button>
+   <button onclick="StopTimer()">Stop</button>
+   <button onclick="ResetTimer()">Reset</button>
+   <script>
+     let sec = 0;
+     let min = 0;
+     let hour = 0;
+     let interval = null;
+
+     function DisplayTimer(){
+        let m = min < 10 ? "0" + min : min;
+        let s = sec < 10 ? "0" + sec : sec;
+        let h = hour <10 ? "0" + hour :hour
+        document.getElementById("timer").innerText = h  +":" + m  + ":" + s;
+     }
+     function StartTimer(){
+        if(interval !=null)return;
+            interval= setInterval(function(){
+                sec++;
+
+                if(sec == 60){
+                    sec =0;
+                    min+=40;
+                
+                if(min == 60){
+                    min = 0;
+                    hour++;
+                }}
+
+             DisplayTimer();
+            },1000)
+            
+        } 
+    function StopTimer(){
+        clearInterval(interval);
+        interval= null;
+    }
+    function ResetTimer(){
+        StopTimer();
+        min=0;
+        sec=0;
+        hour= 0;
+        DisplayTimer();
+    }
+   </script>
+</body>
+
+</html>
