@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ShowMsg()">Show Msg</button>
+    <button onclick="StopMsg()">Stop Msg</button>
+    <p id="output"></p>
+    <script>
+
+        let timer;
+       function ShowMsg(){
+        timer = setTimeout(function(){
+            document.getElementById("output").innerText="Message after 4 seconds";
+        },4000);
+       }
+
+       function StopMsg(){
+         clearTimeout(timer);
+            document.getElementById("output").innerText="Time Terminated"
+        }
+    </script>
+</body>
+</html>
