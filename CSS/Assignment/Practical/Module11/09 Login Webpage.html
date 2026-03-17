@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Professional Login Page</title>
+<style>
+
+/* General Body Styling */
+body{
+    margin:0;
+    font-family:'Segoe UI', Arial, sans-serif; /* Clean sans-serif font */
+    background:linear-gradient(135deg,#3498db,#2980b9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* Login Card */
+.login-card{
+    background:white;
+    padding:40px 30px;
+    border-radius:12px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+    width:350px;
+    text-align:center;
+    transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.login-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Heading */
+.login-card h1{
+    text-align:center; /* Centered heading */
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+/* Instruction Text */
+.login-card p.instruction{
+    font-style:italic; /* Italic text */
+    color:#555;
+    margin-bottom:25px;
+    font-size:16px;
+    text-align:left;
+}
+
+/* Error Message */
+.login-card p.error{
+    color:red; /* Red color */
+    text-align:left;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* Input Fields */
+.login-card input[type="text"],
+.login-card input[type="password"]{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+    box-sizing:border-box;
+    outline:none;
+    transition:border 0.3s;
+}
+
+.login-card input:focus{
+    border:2px solid #3498db;
+}
+
+/* Login Button */
+.login-card button{
+    width:100%;
+    padding:12px;
+    background:#3498db;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:background 0.3s;
+}
+
+.login-card button:hover{
+    background:#2980b9;
+}
+
+/* Forgot Password Link */
+.login-card a{
+    display:block;
+    margin-top:15px;
+    font-size:14px;
+    color:#3498db;
+    text-decoration:none;
+}
+
+.login-card a:hover{
+    text-decoration:underline;
+}
+
+/* Responsive */
+@media(max-width:400px){
+    .login-card{
+        width:90%;
+        padding:30px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+
+<h1>Login</h1>
+
+<p class="instruction">Enter your username and password to access your account.</p>
+
+<p class="error">Invalid username or password!</p>
+
+<input type="text" placeholder="Username">
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+<a href="#">Forgot Password?</a>
+
+</div>
+
+</body>
+</html>
