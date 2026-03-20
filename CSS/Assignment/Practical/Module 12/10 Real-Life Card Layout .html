@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Card Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #eef2f3, #dfe9f3);
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 280px;
+      margin: 15px; /* spacing between cards */
+      border: 1px solid #ddd; /* clean border */
+      padding: 20px; /* inner spacing */
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .card button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      border: none;
+      background: #4a90e2;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .card button:hover {
+      background: #357abd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Image">
+      <h3>Modern Design</h3>
+      <p>Clean and minimal UI with smooth hover effects for a professional look.</p>
+      <button>Learn More</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Image">
+      <h3>Responsive Layout</h3>
+      <p>Cards adjust beautifully across devices using flexible layout techniques.</p>
+      <button>Explore</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150" alt="Image">
+      <h3>Easy Customization</h3>
+      <p>Simple structure makes it easy to tweak styles, colors, and content.</p>
+      <button>Get Started</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
