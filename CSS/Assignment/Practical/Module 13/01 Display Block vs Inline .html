@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Block vs Inline</title>
+</head>
+<body>
+   <style>
+    .block-element {
+      display: block;
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .inline-element {
+      display: inline;
+      background-color: lightgreen;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="block-element">
+    I am a block element (takes full width)
+  </div>
+
+  <div class="block-element">
+    Another block element (appears on a new line)
+  </div>
+
+  <span class="inline-element">
+    I am an inline element
+  </span>
+
+  <span class="inline-element">
+    Another inline element (stays on same line)
+  </span>
+
+</body>
+</html> 
