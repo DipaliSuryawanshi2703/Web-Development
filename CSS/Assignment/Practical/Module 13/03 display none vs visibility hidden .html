@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display None vs Visibility Hidden</title>
+</head>
+<body>
+    <style>
+    .hidden-display {
+      display: none; /* Completely removes element from layout */
+    }
+
+    .hidden-visibility {
+      visibility: hidden; /* Hides element but keeps its space */
+    }
+
+    p {
+      background-color: lightgray;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+<p class="hidden-display">
+    This paragraph is hidden using display: none.
+  </p>
+  <p>This paragraph is visible.</p>
+  <p class="hidden-visibility">
+    This paragraph is hidden using visibility: hidden.
+  </p>
+
+  <p>This paragraph appears after the hidden ones.</p>
+
+</body>
+</html>
