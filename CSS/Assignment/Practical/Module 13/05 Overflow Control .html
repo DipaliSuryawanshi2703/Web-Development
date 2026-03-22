@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Control</title>
+</head>
+<body>
+    <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      border: 2px solid black;
+      margin: 10px;
+      padding: 5px;
+    }
+
+    .hidden {
+      overflow: hidden; /* Extra content is clipped */
+      background-color: lightcoral;
+    }
+
+    .scroll {
+      overflow: scroll; /* Scrollbars always appear */
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box hidden">
+    This is a box with overflow: hidden. Extra content will be cut off and not visible.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+  </div>
+
+  <div class="box scroll">
+    This is a box with overflow: scroll. Scrollbars will appear to view all content.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+  </div>
+
+</body>
+</html>
