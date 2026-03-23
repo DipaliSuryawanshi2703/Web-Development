@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky-heading</title>
+</head>
+<body>
+    <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
+      height: 300px;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    .sticky-heading {
+      position: sticky; /* Makes element sticky */
+      top: 0;           /* Sticks to top when scrolling */
+      background-color: #ff9800;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      z-index: 100;     /* Ensures it stays above content */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="sticky-heading">Sticky Heading 1</div>
+    <p>Content under the sticky heading. Scroll down to see the effect.</p>
+  </div>
+
+  <div class="section">
+    <div class="sticky-heading">Sticky Heading 2</div>
+    <p>More content under another sticky heading. Scroll to observe behavior.</p>
+  </div>
+
+  <div class="section">
+    <div class="sticky-heading">Sticky Heading 3</div>
+    <p>Keep scrolling! Each heading sticks to the top while in its parent section.</p>
+  </div>
+
+</body>
+</html>
