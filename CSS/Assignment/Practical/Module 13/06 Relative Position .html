@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative position</title>
+</head>
+<body>
+    <style>
+    .container {
+      width: 300px;
+      height: 150px;
+      border: 2px solid black;
+      position: relative;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      position: relative; /* Enables movement */
+      top: 20px;   /* Moves down from original position */
+      left: 30px;  /* Moves right from original position */
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">
+      Moved Box
+    </div>
+  </div>
+</body>
+</html>
