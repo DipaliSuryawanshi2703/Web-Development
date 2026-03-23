@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position Inside Relative Parent </title>
+</head>
+<body>
+     <style>
+    .parent {
+      width: 300px;
+      height: 200px;
+      border: 2px solid black;
+      position: relative; /* Reference for child */
+      background-color: lightgray;
+    }
+
+    .child {
+      width: 100px;
+      height: 100px;
+      background-color: teal;
+      color: white;
+      position: absolute; /* Positioned inside parent */
+      top: 20px;
+      left: 40px;
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="parent">
+    <div class="child">
+      Child Box
+    </div>
+  </div>
+</body>
+</html>
