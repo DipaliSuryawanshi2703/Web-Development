@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+</head>
+<body>
+    <style>
+    /* Container Grid */
+    .grid-container {
+      display: grid;
+      grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+      grid-template-columns: 200px 1fr; /* Sidebar fixed, main flexible */
+      grid-template-rows: auto 1fr auto; /* Header and footer auto height */
+      gap: 10px;
+      height: 100vh; /* Full viewport height */
+    }
+
+    /* Grid Areas */
+    .header {
+      grid-area: header;
+      background-color: #2196F3;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #e8f5e9;
+      padding: 20px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Responsive: collapse sidebar on small screens */
+    @media (max-width: 700px) {
+      .grid-container {
+        grid-template-areas: 
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="main">Main Content Area</div>
+    <div class="footer">Footer</div>
+  </div> 
+</body>
+</html>
