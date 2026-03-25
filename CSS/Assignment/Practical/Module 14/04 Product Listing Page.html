@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing Page</title>
+</head>
+<body>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px 0;
+      color: #333;
+      background-color: rgb(241, 111, 198);
+    }
+
+    /* Product grid container */
+    .product-grid {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+
+      /* Responsive columns: min 200px, max 1fr */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Product card */
+    .product-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Product image */
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* Product info */
+    .product-info {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-info h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .product-info p {
+      margin: 0 0 15px 0;
+      color: #666;
+      font-weight: bold;
+    }
+
+    .product-info button {
+      padding: 10px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.2s;
+    }
+
+    .product-info button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Product Listing</h1>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <img
+        src="https://www.google.com/imgres?q=notebook&imgurl=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F718vM%2B75UNL._AC_UF1000%2C1000_QL80_.jpg&imgrefurl=https%3A%2F%2Fwww.amazon.in%2FNotebook-Plastic-Hardcover-College-Supplies%2Fdp%2FB09XMM27BQ&docid=-8_rFgSK5_fypM&tbnid=LAQvwZd4Ts_bcM&vet=12ahUKEwjc9PyOl6yTAxWvbvUHHYUPJ7wQnPAOegQIGxAB..i&w=1000&h=900&hcb=2&ved=2ahUKEwjc9PyOl6yTAxWvbvUHHYUPJ7wQnPAOegQIGxAB"
+        alt="Product 1">
+      <div class="product-info">
+        <h3>Product 1</h3>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://www.google.com/imgres?q=pens&imgurl=https%3A%2F%2Fscooboo.in%2Fcdn%2Fshop%2Ffiles%2F20_Assorted_Kaco_Pure_Assorted_0.5mm_Gel_Pen_Set.jpg%3Fv%3D1765343014%26width%3D1080&imgrefurl=https%3A%2F%2Fscooboo.in%2Fproducts%2Fpure-coloured-gel-pens%3Fsrsltid%3DAfmBOoo4dHW5J-hvAwi1Fcu6mD1WwR5USXwzwUFLvBda5L0ReiLDKGyG&docid=WRFCeLYG-P5UkM&tbnid=b8nwheiz1byjQM&vet=12ahUKEwiGpOinl6yTAxUcia8BHZOpKs8QnPAOegQIFhAB..i&w=1080&h=1080&hcb=2&ved=2ahUKEwiGpOinl6yTAxUcia8BHZOpKs8QnPAOegQIFhAB"
+        alt="Product 2">
+      <div class="product-info">
+        <h3>Product 2</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://www.google.com/imgres?q=sketch%20pen&imgurl=https%3A%2F%2Fshop.ourstore.in%2Fwp-content%2Fuploads%2F2022%2F11%2Fourstore-2022-11-22T023315.656.png&imgrefurl=https%3A%2F%2Fshop.ourstore.in%2Fproduct%2Fluxor-sketch-pen-assrted%2F%3Fsrsltid%3DAfmBOoo9-FAOtrpW2MMmlWhn3TtdYXUQ438-PHwv7U5v6_1R0lfuBJiK&docid=LiqE4mvLf4W_hM&tbnid=hRqmg131V_oolM&vet=12ahUKEwi40prAl6yTAxV6SPUHHfKyL-EQnPAOegQIFBAB..i&w=1080&h=1080&hcb=2&ved=2ahUKEwi40prAl6yTAxV6SPUHHfKyL-EQnPAOegQIFBAB"
+        alt="Product 3">
+      <div class="product-info">
+        <h3>Product 3</h3>
+        <p>$39.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img
+        src="https://www.google.com/imgres?q=writing%20pad&imgurl=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F008%2F177%2F9-5-x-13-5-inch-5mm-thick-plastic-rectangle-clipboard-writing-pad--444.jpg&imgrefurl=https%3A%2F%2Fwww.tradeindia.com%2Fproducts%2F9-5-x-13-5-inch-and-5mm-thick-plastic-rectangle-clipboard-writing-pad-8177444.html&docid=rZ4UozMT1INfrM&tbnid=wGrCPirYhymupM&vet=12ahUKEwj9nu7al6yTAxXlbvUHHUq6I6QQnPAOegQIaRAB..i&w=500&h=500&hcb=2&ved=2ahUKEwj9nu7al6yTAxXlbvUHHUq6I6QQnPAOegQIaRAB"
+        alt="Product 4">
+      <div class="product-info">
+        <h3>Product 4</h3>
+        <p>$24.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
