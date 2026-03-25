@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+    /* Grid container for cards */
+    .card-container {
+      display: grid;
+      gap: 20px; /* Space between cards */
+      padding: 20px;
+
+      /* Dynamic columns: each card min 200px, max 1fr, auto-fit fills available space */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* Card styling */
+    .card {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 18px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    /* Hover effect */
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+    <div class="card">Card 3</div>
+    <div class="card">Card 4</div>
+    <div class="card">Card 5</div>
+    <div class="card">Card 6</div>
+    <div class="card">Card 7</div>
+  </div>
+
+</body>
+</html>
