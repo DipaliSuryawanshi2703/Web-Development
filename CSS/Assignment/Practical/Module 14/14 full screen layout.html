@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Full Screen Grid Layout</title>
+  <style>
+    /* Full-screen grid container */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;  /* 3-column layout */
+      grid-template-rows: 100px 1fr 50px;  /* header, main, footer */
+      height: 100vh;  /* full viewport height */
+      gap: 10px;
+      padding: 10px;
+      background-color: lightgray;
+      box-sizing: border-box;
+    }
+
+    /* Common styles */
+    .grid-item {
+      padding: 20px;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    /* Individual sections */
+    .header {
+      background-color: teal;
+      grid-column: 1 / 4; /* spans all columns */
+      grid-row: 1;
+    }
+
+    .sidebar {
+      background-color: orange;
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .content {
+      background-color: purple;
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .extra {
+      background-color: green;
+      grid-column: 3;
+      grid-row: 2;
+    }
+
+    .footer {
+      background-color: gray;
+      grid-column: 1 / 4; /* spans all columns */
+      grid-row: 3;
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item header">Header</div>
+  <div class="grid-item sidebar">Sidebar</div>
+  <div class="grid-item content">Main Content</div>
+  <div class="grid-item extra">Extra Section</div>
+  <div class="grid-item footer">Footer</div>
+</div>
+
+</body>
+</html>

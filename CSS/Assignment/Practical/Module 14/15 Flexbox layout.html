@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flexbox Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Flexbox container */
+    .flex-container {
+      display: flex;
+      flex-direction: column; /* main axis vertical */
+      height: 100vh;
+    }
+
+    .header, .footer {
+      background-color: teal;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .main {
+      display: flex; /* horizontal row inside main */
+      flex: 1;       /* take remaining space */
+      gap: 10px;
+      padding: 10px;
+      background-color: lightgray;
+    }
+
+    .item {
+      background-color: purple;
+      color: white;
+      flex: 1;       /* equal width */
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div class="header">Header</div>
+  <div class="main">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+  <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>

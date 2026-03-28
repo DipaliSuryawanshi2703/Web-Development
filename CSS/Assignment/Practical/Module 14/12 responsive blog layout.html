@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Blog Layout</title>
+  <style>
+    /* Main Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Content + Sidebar */
+  grid-template-areas:
+    "header header"
+    "content sidebar"
+    "footer footer";
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Grid Areas */
+.header {
+  grid-area: header;
+  background: teal;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  gap: 10px;
+}
+
+.post {
+  background: lightblue;
+  padding: 15px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: orange;
+  padding: 15px;
+}
+
+.footer {
+  grid-area: footer;
+  background: gray;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* 🔽 Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
+}
+  </style>
+</head>
+<body>
+
+<div class="grid-container">
+  <header class="header">My Blog</header>
+  
+  <main class="content">
+    <article class="post">Post 1</article>
+    <article class="post">Post 2</article>
+    <article class="post">Post 3</article>
+  </main>
+  
+  <aside class="sidebar">Sidebar</aside>
+  
+  <footer class="footer">Footer</footer>
+</div>
+
+</body>
+</html>
