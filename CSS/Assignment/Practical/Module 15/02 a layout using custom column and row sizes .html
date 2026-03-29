@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr; /* small, medium, large */
+            grid-template-rows: 100px 150px 200px; /* custom row heights */
+            gap: 10px;
+            padding: 10px;
+            background-color: #eee;
+        }
+
+        .item {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Custom Column and Row Sizes</h2>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+        <div class="item">Item 9</div>
+    </div>
+
+</body>
+</html>
