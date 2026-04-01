@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Image Gallery</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .container img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Image Gallery using CSS Grid</h2>
+
+    <div class="container">
+        <img src="https://picsum.photos/300?random=1" alt="Image 1">
+        <img src="https://picsum.photos/300?random=2" alt="Image 2">
+        <img src="https://picsum.photos/300?random=3" alt="Image 3">
+        <img src="https://picsum.photos/300?random=4" alt="Image 4">
+        <img src="https://picsum.photos/300?random=5" alt="Image 5">
+        <img src="https://picsum.photos/300?random=6" alt="Image 6">
+        <img src="https://picsum.photos/300?random=7" alt="Image 7">
+        <img src="https://picsum.photos/300?random=8" alt="Image 8">
+    </div>
+
+</body>
+</html>
