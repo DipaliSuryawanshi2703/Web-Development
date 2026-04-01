@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Grid Layout</title>
+    <style>
+        .outer-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto;
+            gap: 15px;
+            padding: 15px;
+            background-color: #f0f0f0;
+        }
+
+        .outer-item {
+            background-color: #2196F3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Nested grid inside second item */
+        .nested-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .nested-item {
+            background-color: #81C784;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Nested Grid Layout Example</h2>
+
+    <div class="outer-container">
+        <div class="outer-item">Outer Item 1</div>
+
+        <div class="outer-item">
+            <h3>Outer Item 2 (Nested Grid)</h3>
+            <div class="nested-container">
+                <div class="nested-item">Nested 1</div>
+                <div class="nested-item">Nested 2</div>
+                <div class="nested-item">Nested 3</div>
+                <div class="nested-item">Nested 4</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
