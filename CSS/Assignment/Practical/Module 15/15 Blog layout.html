@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Blog Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* main + sidebar */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .main {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .main h2 {
+            margin-top: 0;
+        }
+
+        .sidebar {
+            background-color: #bdc3c7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        /* Responsive: single column on small screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .main, .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center; padding:20px;">Blog Layout Example</h1>
+
+    <div class="container">
+        <div class="main">
+            <h2>Main Article</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus est sed nibh bibendum, at posuere ligula convallis. Sed sit amet eros at sapien scelerisque eleifend.</p>
+            <p>More content goes here. Add paragraphs, images, or code blocks to make your blog realistic.</p>
+        </div>
+
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Recent Posts</p>
+            <ul>
+                <li>Post 1</li>
+                <li>Post 2</li>
+                <li>Post 3</li>
+            </ul>
+
+            <p>Categories</p>
+            <ul>
+                <li>Tech</li>
+                <li>Design</li>
+                <li>Lifestyle</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
