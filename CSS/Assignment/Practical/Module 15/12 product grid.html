@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Product Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product-card p {
+            color: #666;
+            padding: 0 10px 10px 10px;
+            font-size: 14px;
+        }
+
+        .product-card button {
+            margin-bottom: 10px;
+            padding: 8px 15px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center; padding:20px;">Responsive Product Grid</h2>
+
+    <div class="container">
+        <div class="product-card">
+            <img src="https://picsum.photos/300?random=1" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>High quality product description goes here.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300?random=2" alt="Product 2">
+            <h3>Product 2</h3>
+            <p>High quality product description goes here.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300?random=3" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>High quality product description goes here.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300?random=4" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>High quality product description goes here.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300?random=5" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>High quality product description goes here.</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://picsum.photos/300?random=6" alt="Product 6">
+            <h3>Product 6</h3>
+            <p>High quality product description goes here.</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+</body>
+</html>
