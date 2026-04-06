@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Typography</title>
+
+<style>
+    /* Base (mobile-first) */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.5;
+        font-size: 16px; /* Base font size */
+    }
+
+    h1 {
+        font-size: 2rem; /* 2 times base font size */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+        body {
+            font-size: 18px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+        body {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Responsive Typography Example</h1>
+<h2>Subheading</h2>
+<p>
+    This is a paragraph demonstrating responsive typography. The font size changes automatically based on the screen size for better readability across devices.
+</p>
+
+<p>
+    Using rem units and media queries ensures the text scales properly for mobile, tablet, and desktop devices.
+</p>
+
+</body>
+</html>
