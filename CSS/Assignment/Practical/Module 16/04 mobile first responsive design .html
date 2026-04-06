@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mobile First Design</title>
+
+<style>
+    /*Mobile First (Default CSS) */
+    body {
+        font-family: Arial;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* mobile → vertical */
+    }
+
+    .box {
+        padding: 20px;
+        background: lightblue;
+        margin: 5px;
+        text-align: center;
+    }
+
+    /*Tablet */
+    @media (min-width: 768px) {
+        .container {
+            flex-direction: row; /* horizontal */
+        }
+
+        .box {
+            flex: 1;
+        }
+    }
+
+    /* Desktop */
+    @media (min-width: 1024px) {
+        .box {
+            background: lightgreen;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+</div>
+
+</body>
+</html>
