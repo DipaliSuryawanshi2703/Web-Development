@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Two Column Layout</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .column {
+        flex: 50%;   /* 2 columns */
+        padding: 20px;
+    }
+
+    .left {
+        background: #f4f4f4;
+    }
+
+    .right {
+        background: #ddd;
+    }
+
+    /* 📱 Mobile View */
+    @media (max-width: 768px) {
+        .column {
+            flex: 100%;   /* 1 column */
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="column left">
+        <h2>Left Column</h2>
+        <p>Some content here...</p>
+    </div>
+
+    <div class="column right">
+        <h2>Right Column</h2>
+        <p>Some content here...</p>
+    </div>
+</div>
+
+</body>
+</html>
