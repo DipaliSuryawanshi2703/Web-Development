@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript to HTML </title>
+     <script src="External.js"></script>
+</head>
+<body>
+    <label>Username  :</label>
+    <input type="name" placeholder="Enter Username" required>
+    <button onclick="alert('Username Is Submited' )">Submit</button> <!---inline Css-->
+    <label>Password</label>
+    <input type="password" required>
+    <button id="save">Save</button>
+    <button id="ok">ok</button>
+    <script>////External Js
+         let Ok =document.getElementById("save")
+         Ok.onclick=function(){
+           alert('Password Saved');
+         }
+         Ok.addEventListener("mouseover",function(){Ok.style.background="Red"});
+         Ok.addEventListener("mouseleave",function(){Ok.style.background="pink"});
+   </script>
+  
+</body>
+</html>
