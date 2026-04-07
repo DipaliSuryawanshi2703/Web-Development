@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Script Placement</title>
+
+    <!-- Script in HEAD -->
+    <script>
+        // This will run before DOM elements are loaded
+        // This will fail because the element doesn't exist yet
+        document.getElementById("head-demo").innerHTML = "Updated from HEAD script";
+    </script>
+
+</head>
+<body>
+
+<h2>Script Placement Comparison</h2>
+
+<p id="head-demo">Head Script Result (will fail)</p>
+<p id="body-demo">Body Script Result (will work)</p>
+
+<!-- Script before closing BODY -->
+<script>
+    // This runs after DOM is fully loaded
+    document.getElementById("body-demo").innerHTML = "Updated from BODY script";
+</script>
+
+</body>
+</html>
