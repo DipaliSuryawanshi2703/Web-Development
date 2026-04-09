@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Defer Attribute </title>
+
+    <!-- Script in head WITHOUT defer (will fail) -->
+    <script>
+        // Runs immediately, before DOM is loaded
+        // This will fail
+        document.getElementById("no-defer").innerHTML = "Updated without defer";
+    </script>
+
+    <!-- Script in head WITH defer (will succeed) -->
+    <script defer>
+        // Runs after DOM is fully parsed
+        document.getElementById("with-defer").innerHTML = "Updated with defer";
+        document.getElementById("with-defer").style.background="red";
+    </script>
+
+</head>
+<body>
+
+<h2>Defer Attribute Demo</h2>
+
+<p id="no-defer">No Defer Script Result (will fail)</p>
+<p id="with-defer">Defer Script Result (will work)</p>
+
+</body>
+</html>
