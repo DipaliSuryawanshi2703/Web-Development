@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal JS Debugging Example</title>
+</head>
+<body>
+    <h2>Internal JS Debugging Example</h2>
+    <button id="runError">Run Code with Error</button>
+
+    <script>
+        // Select the button
+        const btn = document.getElementById("runError");
+
+        // Add click event listener
+        btn.addEventListener("click", function() {
+            let message = "Hello, Internal JS Debugging!";
+
+            // Intentional typo: 'messege' instead of 'message'
+            console.log(messege); // ❌ This will cause ReferenceError
+        });
+    </script>
+</body>
+</html>
