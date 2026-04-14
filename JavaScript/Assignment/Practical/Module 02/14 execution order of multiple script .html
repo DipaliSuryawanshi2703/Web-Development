@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>execution order of multiple script </title>
+    <script>
+        console.log("In Head Tag");
+        document.getElementById("result").innerText ="I Am In Head Tag";
+        
+        
+    </script>
+</head>
+<body>
+   <h2>We can Observe Multiple Script Tag Execution </h2> 
+   <p id="result"></p>
+    <script>
+        console.log("In body Tag");
+        document.getElementById("result").innerText ="I Am In Body Tag"
+    </script>
+</body>
+</html>
